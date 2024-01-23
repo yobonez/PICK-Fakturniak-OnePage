@@ -15,62 +15,135 @@
 } */
 
 /* system fonts */
+html, body {
+    padding: 0;
+    margin: 0;
+    min-height: 100% !important;
+    height: 100%;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--dark-color);
+    background-color: #eaeaea;
     font-size: 16px;
+    line-height: 20px;
 }
 
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--dark-color);
 }
-.desktop-nav {
+
+.fluid-container {
+    position: fixed;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    max-height: 80px;
-    height: 100%;
-    max-width: 1065px;
+    justify-content: center;
     width:100%;
+    height: 80px;
+    background-color: var(--dark-color);
 }
 
-.desktop-nav .logo>img {
-    width: 250px;
-    height: 51px;
-    filter: invert(99%) sepia(0%) saturate(1028%) hue-rotate(48deg) brightness(114%) contrast(84%); /*#EAEAEA https://codepen.io/sosuke/pen/Pjoqqp*/
+.content-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: var(--dark-color); */
+    width: 100%;
+    max-width: 1065px;
 }
-
-.desktop-nav .scroll-buttons {
-    display: flex;
-}
-.desktop-nav .scroll-buttons > a  {
-    text-decoration: none;
-    list-style: none;
-    color: var(--light-color);
+.content-container img {
+    border-radius: 20px;
 }
 
 .btn {
     display: inline-flex;
-    padding: 5px 20px;
+    padding: 7px 20px;
     color: var(--light-color);
     background-color: var(--dark-color);
     border: solid 3px var(--accent-color);
     border-radius: 20px;
     text-decoration: none;
     transition: all 200ms ease-in-out;
+    transition-property: background-color, color;
 }
 .btn-invert {
     display: inline-flex;
-    padding: 5px 20px;
+    padding: 7px 20px;
     color: var(--dark-color);
     background-color: var(--light-color);
     border: solid 3px var(--accent-color);
     border-radius: 20px;
     text-decoration: none;
     transition: all 200ms ease-in-out;
+    transition-property: background-color, color;
+}
+
+.desktop-nav {
+    background-color: var(--dark-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width:100%;
+    gap: 48px;
+    max-width: 1065px;
+}
+.desktop-nav .logo>img {
+    width: 250px;
+    height: 51px;
+    filter: invert(99%) sepia(0%) saturate(1028%) hue-rotate(48deg) brightness(114%) contrast(84%); /*#EAEAEA https://codepen.io/sosuke/pen/Pjoqqp*/
+}
+.desktop-nav .scroll-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 31px;
+    margin: 0; padding: 0;
+}
+.desktop-nav .scroll-buttons > a  {
+    text-decoration: none;
+    list-style: none;
+    color: var(--light-color);
+}
+.desktop-nav .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 13px;
+}
+
+.cta {
+    display: flex;
+    justify-content: space-between;
+    gap: 31px;
+}
+
+.hero {
+    display: flex;
+    margin-top: 180px; /*rekompensacja pozycji fixed navbara*/
+    margin-bottom: 100px;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    color: var(--light-color)
+}
+
+.hero .catchphrase {
+    display: flex;
+    width: 553px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 42px;
+}
+.hero .catchphrase div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:31px;
+}
+.hero .catchphrase div p {
+    width: 400px;
 }
 
 .btn:hover {
@@ -81,21 +154,31 @@ body {
     color: var(--light-color);
     background-color: var(--dark-color);
 }
+mark.accent {
+    color: var(--accent-color);
+    background: none;
+}
 
 /* web fonts */
 /* to na koniec */
 @font-face {
     font-family: 'Dubai Regular';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     src: url(../fonts/Dubai-Regular.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Dubai Bold';
-    font-style: normal;
+    font-style: bold;
     font-weight: 400;
     src: url(../fonts/Dubai-Bold.woff2) format('woff2');
 }
 body {
-    font-family: "Dubai Regular";
+    font-family: "Dubai";
 }
+
+h1 { margin: 0; padding: 0; font-size: 48px; line-height: 48px; }
+h2 { margin: 0; padding: 0; font-size: 36px; line-height: 36px; }
+h3 { margin: 0; padding: 0; font-size: 32px; line-height: 32px; }
+h4 { margin: 0; padding: 0; font-size: 20px; line-height: 20px; }
+p { margin: 0; padding: 0}
