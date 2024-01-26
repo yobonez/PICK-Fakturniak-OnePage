@@ -4,6 +4,21 @@
     --dark-color: #1A1A1A;
     --accent-color:#1B70C1;
 }
+
+.dark-bkg {
+    color: var(--light-color);
+}
+.white-bkg {
+    color: var(--dark-color);
+}
+
+.dark-bkg .icon {
+    filter: invert(99%) sepia(0%) saturate(1028%) hue-rotate(48deg) brightness(114%) contrast(84%); /*#EAEAEA https://codepen.io/sosuke/pen/Pjoqqp*/
+}
+.white-bkg .icon {
+    filter: invert(0%) sepia(4%) saturate(2273%) hue-rotate(326deg) brightness(82%) contrast(80%); /*#1A1A1A*/
+}
+
 /* .white-text {
     color: var(--light-color);
 }
@@ -47,10 +62,12 @@ body {
 .content-container {
     display:flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: left;
     /* background-color: var(--dark-color); */
     width: 100%;
     max-width: 1065px;
+    /* w ktoryms momencie prawdopodobnie moze sie wyłożyć, ale raczej hierarchie marginesów mam wszędzie zachowaną*/
+    gap: 75px;
 }
 .content-container img {
     border-radius: 20px;
@@ -59,22 +76,19 @@ body {
 .btn {
     display: inline-flex;
     padding: 7px 20px;
-    color: var(--light-color);
-    background-color: var(--dark-color);
-    border: solid 3px var(--accent-color);
-    border-radius: 20px;
-    text-decoration: none;
-    transition: all 200ms ease-in-out;
-    transition-property: background-color, color;
-}
-.btn-invert {
-    display: inline-flex;
-    padding: 7px 20px;
     color: var(--dark-color);
     background-color: var(--light-color);
     border: solid 3px var(--accent-color);
     border-radius: 20px;
     text-decoration: none;
+    transition: all 200ms ease-in-out;
+    transition-property: background-color, color;
+    width: fit-content;
+}
+.btn.black {
+    color: var(--light-color);
+    background-color: var(--dark-color);
+    border: solid 3px var(--accent-color);
     transition: all 200ms ease-in-out;
     transition-property: background-color, color;
 }
@@ -93,7 +107,6 @@ body {
 .desktop-nav .logo>img {
     width: 250px;
     height: 51px;
-    filter: invert(99%) sepia(0%) saturate(1028%) hue-rotate(48deg) brightness(114%) contrast(84%); /*#EAEAEA https://codepen.io/sosuke/pen/Pjoqqp*/
 }
 .desktop-nav .scroll-buttons {
     display: flex;
@@ -120,7 +133,7 @@ body {
 
 .hero {
     display: flex;
-    margin-top: 180px; /*rekompensacja pozycji fixed navbara*/
+    margin-top: 180px; /*+80px rekompensacja pozycji fixed navbara, bo jest fixed*/
     margin-bottom: 100px;
     width:100%;
     justify-content: space-between;
@@ -146,13 +159,75 @@ body {
     width: 400px;
 }
 
-.btn:hover {
-    color: var(--dark-color);
-    background-color: var(--light-color);
+.whybother {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
 }
-.btn-invert:hover {
+
+.cta-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 75px;
+}
+
+.cta-card img {
+    height: 525px;
+    width: 525px;
+}
+
+/*left - domyslnie*/
+.cta-card.right {
+    flex-direction: row-reverse;
+}
+
+.cta-card .benefit-content {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+.cta-card .benefit-content h3 {
+    width: 345px;
+}
+.cta-card .benefit-content div img {
+    height: 33px;
+    width: 33px;
+}
+
+.cta-card .benefit-points {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+.cta-card .benefit-point {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 23px;
+}
+
+.cta-card .benefit-content .benefit-point img {
+    border-radius: 0;
+}
+.benefit-point-content {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+
+.btn:hover {
     color: var(--light-color);
     background-color: var(--dark-color);
+}
+.btn.black:hover {
+    color: var(--dark-color);
+    background-color: var(--light-color);
 }
 mark.accent {
     color: var(--accent-color);
