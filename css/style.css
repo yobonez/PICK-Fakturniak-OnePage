@@ -1,9 +1,13 @@
 /* colors */
+ 
+* {box-sizing: border-box;}
 :root{
     --light-color: #EAEAEA;
     --dark-color: #1A1A1A;
     --accent-color:#1B70C1;
 }
+
+html {scroll-behavior: smooth;}
 
 html, body {
     padding: 0;
@@ -12,7 +16,7 @@ html, body {
     height: 100%;
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
     background-color: var(--light-color);
     font-size: 16px;
     line-height: 20px;
@@ -23,6 +27,7 @@ h2 { margin: 0; padding: 0; font-size: 36px; line-height: 36px; }
 h3 { margin: 0; padding: 0; font-size: 32px; line-height: 32px; }
 h4 { margin: 0; padding: 0; font-size: 20px; line-height: 20px; }
 p { margin: 0; padding: 0; font-size: 16px; line-height: 20px;}
+.occupation { margin: 0; padding: 0; font-size: 12px; line-height: 12.5px; }
 
 .dark-bkg {
     color: var(--light-color);
@@ -38,6 +43,17 @@ p { margin: 0; padding: 0; font-size: 16px; line-height: 20px;}
 }
 .white-bkg .icon {
     filter: invert(0%) sepia(4%) saturate(2273%) hue-rotate(326deg) brightness(82%) contrast(80%); /*#1A1A1A*/
+}
+
+.icon.dark {
+    filter: invert(0%) sepia(4%) saturate(2273%) hue-rotate(326deg) brightness(82%) contrast(80%);
+}
+.icon.light {
+    filter: invert(99%) sepia(0%) saturate(1028%) hue-rotate(48deg) brightness(114%) contrast(84%);
+}
+
+.icon.accent {
+    filter: invert(26%) sepia(84%) saturate(1230%) hue-rotate(186deg) brightness(112%) contrast(88%);
 }
 
 /* .white-text {
@@ -66,6 +82,7 @@ p { margin: 0; padding: 0; font-size: 16px; line-height: 20px;}
     width:100%;
     height: 80px;
     background-color: var(--dark-color);
+    z-index: 1;
 }
 
 .content-container {
@@ -103,6 +120,11 @@ p { margin: 0; padding: 0; font-size: 16px; line-height: 20px;}
     transition-property: background-color, color;
 }
 
+.logo img {
+    width: 250px;
+    height: 51px;
+}
+
 .desktop-nav {
     background-color: var(--dark-color);
     display: flex;
@@ -113,10 +135,6 @@ p { margin: 0; padding: 0; font-size: 16px; line-height: 20px;}
     width:100%;
     gap: 48px;
     max-width: 1065px;
-}
-.desktop-nav .logo>img {
-    width: 250px;
-    height: 51px;
 }
 .desktop-nav .scroll-buttons {
     display: flex;
@@ -236,7 +254,6 @@ p { margin: 0; padding: 0; font-size: 16px; line-height: 20px;}
     color: var(--dark-color);
     display: inline-flex;
     height: 341px;
-    width: 305px;
     padding: 20px;
     flex-direction: column;
     align-items: center;
@@ -281,19 +298,168 @@ p { margin: 0; padding: 0; font-size: 16px; line-height: 20px;}
     align-self: flex-end;
 }
 .carousel {
+    scrollbar-width: none;
     align-self: flex-start;
     display: flex;
     flex-direction: row;
-    max-height: 398px;
+    height: 383px;
     width:100%;
     gap: 42px;
     position: relative;
     overflow-x: scroll;
+    margin-bottom: 100px;
 }
 .carousel .item {
     display: inline-block;
 }
+.carousel .item:nth-child(odd) {
+    align-self: flex-end;
+}
+.carousel::-webkit-scrollbar{
+    display:none;
+}
 
+.plans {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.subscription-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 476px;
+    gap: 75px;
+}
+
+.subscription-plan.offset {
+    align-self: flex-start;
+}
+
+.subscription-plan {
+    padding: 20px;
+    width: 305px;
+    height: 436px;
+    border-radius: 20px;
+    background-color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /*dziwne figma ma te gapy, w przegladarce inne a w figmie inne*/
+    flex-shrink: 0;
+}
+
+.subscription-plan img {
+    border-radius: 0;
+}
+
+.subscription-plan .plan-summary {
+    display: flex;
+    width: 265px;
+    flex-direction: column;
+    gap: 23px;
+}
+.subscription-plan .plan-introduction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 23px;
+}
+.subscription-plan .plan-introduction .icon {
+    width: 50px;
+    height: 50px;
+}
+
+.subscription-plan .plan-introduction .icon-holder{
+    min-width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+}
+
+.icon-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.have-havenots {
+    display: flex;
+    flex-direction: column;
+    gap:23px;
+}
+
+.have-havenots .icon {
+    width: 30px;
+    height: 30px;
+}
+
+.have-havenots .benefit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    gap:42px;
+}
+.content-container.gap42 {
+    gap:42px;
+}
+.footer .info-content {
+    display: flex;
+    gap: 42px;
+}
+
+.footer .info-content .cell {
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+    gap: 31px;
+}
+
+.footer .info-content .cell .text {
+    display: grid;
+    gap: 23px;
+    
+}
+.footer .info-content .cell .text > a{
+    text-decoration: none;
+    list-style: none;
+    color: var(--light-color);
+}
+
+.contactlink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.contactlink img {
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+}
+.footer .info-content .cell .text div {
+    display: flex;
+    gap: 23px;
+}
+
+hr {
+    width: 100%;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .btn:hover {
     color: var(--light-color);
@@ -311,18 +477,24 @@ mark.accent {
 /* web fonts */
 /* to na koniec */
 @font-face {
-    font-family: 'Dubai Regular';
+    font-family: 'Dubai-Regular';
     font-style: normal;
-    font-weight: 600;
-    src: url(../fonts/Dubai-Regular.woff2) format('woff2');
+    font-weight: 400;
+    src: url(../fonts/Dubai-Regular.woff) format('woff');
 }
 @font-face {
-    font-family: 'Dubai Bold';
+    font-family: 'Dubai-Bold';
     font-style: bold;
-    font-weight: 400;
-    src: url(../fonts/Dubai-Bold.woff2) format('woff2');
+    font-weight: 600;
+    src: url(../fonts/Dubai-Bold.woff) format('woff');
 }
 body {
-    font-family: "Dubai";
+    font-family: 'Dubai-Regular';
 }
 
+h1 { font-family: 'Dubai-Bold'; margin: 0; padding: 0; font-size: 48px; line-height: 48px; }
+h2 { font-family: 'Dubai-Bold'; margin: 0; padding: 0; font-size: 36px; line-height: 36px; }
+h3 { font-family: 'Dubai-Bold'; margin: 0; padding: 0; font-size: 32px; line-height: 32px; }
+h4 { font-family: 'Dubai-Bold'; margin: 0; padding: 0; font-size: 20px; line-height: 20px; }
+p { font-family: 'Dubai-Regular'; margin: 0; padding: 0; font-size: 16px; line-height: 20px;}
+.occupation { font-family: 'Dubai-Regular'; margin: 0; padding: 0; font-size: 12px; line-height: 12.5px; }
