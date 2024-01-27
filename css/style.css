@@ -5,11 +5,32 @@
     --accent-color:#1B70C1;
 }
 
+html, body {
+    padding: 0;
+    margin: 0;
+    min-height: 100% !important;
+    height: 100%;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--light-color);
+    font-size: 16px;
+    line-height: 20px;
+}
+
+h1 { margin: 0; padding: 0; font-size: 48px; line-height: 48px; }
+h2 { margin: 0; padding: 0; font-size: 36px; line-height: 36px; }
+h3 { margin: 0; padding: 0; font-size: 32px; line-height: 32px; }
+h4 { margin: 0; padding: 0; font-size: 20px; line-height: 20px; }
+p { margin: 0; padding: 0; font-size: 16px; line-height: 20px;}
+
 .dark-bkg {
     color: var(--light-color);
+    background-color: var(--dark-color);
 }
 .white-bkg {
     color: var(--dark-color);
+    background-color: var(--light-color);
 }
 
 .dark-bkg .icon {
@@ -30,24 +51,12 @@
 } */
 
 /* system fonts */
-html, body {
-    padding: 0;
-    margin: 0;
-    min-height: 100% !important;
-    height: 100%;
-}
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #eaeaea;
-    font-size: 16px;
-    line-height: 20px;
-}
+
 
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--dark-color);
 }
 
 .fluid-container {
@@ -60,10 +69,11 @@ body {
 }
 
 .content-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
     display:flex;
     flex-direction: column;
     justify-content: left;
-    /* background-color: var(--dark-color); */
     width: 100%;
     max-width: 1065px;
     /* w ktoryms momencie prawdopodobnie moze sie wyłożyć, ale raczej hierarchie marginesów mam wszędzie zachowaną*/
@@ -133,8 +143,7 @@ body {
 
 .hero {
     display: flex;
-    margin-top: 180px; /*+80px rekompensacja pozycji fixed navbara, bo jest fixed*/
-    margin-bottom: 100px;
+    margin-top: 80px; /*+80px rekompensacja pozycji fixed navbara, bo jest fixed*/
     width:100%;
     justify-content: space-between;
     align-items: center;
@@ -160,8 +169,6 @@ body {
 }
 
 .whybother {
-    margin-top: 100px;
-    margin-bottom: 100px;
     display: flex;
     justify-content: center;
 }
@@ -220,6 +227,73 @@ body {
     gap: 23px;
 }
 
+.opinions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.opinion {
+    color: var(--dark-color);
+    display: inline-flex;
+    height: 341px;
+    width: 305px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 23px;
+    flex-shrink: 0; 
+    background-color: var(--light-color);
+    border-radius: 20px;
+}
+.content-container.exception {
+    margin-bottom: 75px;
+}
+.opinion .contents {
+    display: flex;
+    max-width: 100%;
+}
+.opinion .contents p {
+    margin-left: 23px;
+    margin-right: 23px;
+}
+.client-introduction {
+    display: flex;
+    width: 305px;
+    align-items: center;
+    gap: 13px;
+}
+.client-introduction img.pfp {
+    border-radius: 35px;
+    border: 2px solid var(--dark-color);
+    width: 63px;
+    height: 63px;
+}
+.opinion .icon {
+    border-radius: unset;
+    filter: invert(26%) sepia(84%) saturate(1230%) hue-rotate(186deg) brightness(112%) contrast(88%); /*#1B70C1*/
+    width: 23px;
+    height: 17px;
+}
+.opinion .icon.up {
+    transform: rotate(180deg);
+}
+.opinion .icon.down {
+    align-self: flex-end;
+}
+.carousel {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    max-height: 398px;
+    width:100%;
+    gap: 42px;
+    position: relative;
+    overflow-x: scroll;
+}
+.carousel .item {
+    display: inline-block;
+}
+
 
 .btn:hover {
     color: var(--light-color);
@@ -252,8 +326,3 @@ body {
     font-family: "Dubai";
 }
 
-h1 { margin: 0; padding: 0; font-size: 48px; line-height: 48px; }
-h2 { margin: 0; padding: 0; font-size: 36px; line-height: 36px; }
-h3 { margin: 0; padding: 0; font-size: 32px; line-height: 32px; }
-h4 { margin: 0; padding: 0; font-size: 20px; line-height: 20px; }
-p { margin: 0; padding: 0}
