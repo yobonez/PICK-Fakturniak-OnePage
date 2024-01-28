@@ -101,6 +101,7 @@ p { margin: 0; padding: 0; font-size: 14px; line-height: 14px; font-family: 'Luc
     transition: all 200ms ease-in-out;
     transition-property: background-color, color;
     width: fit-content;
+    cursor: pointer;
 }
 .btn.black {
     color: var(--light-color);
@@ -355,6 +356,7 @@ p { margin: 0; padding: 0; font-size: 14px; line-height: 14px; font-family: 'Luc
     flex-direction: column;
     gap: 23px; /*dziwne figma ma te gapy, w przegladarce inne a w figmie inne*/
     flex-shrink: 0;
+    cursor: pointer;
 }
 .subscription-plan img {
     border-radius: 0;
@@ -436,6 +438,7 @@ p { margin: 0; padding: 0; font-size: 14px; line-height: 14px; font-family: 'Luc
     flex-direction: row;
     align-items: center;
     gap: 20px;
+    cursor:pointer;
 }
 .contactlink img {
     width: 22px;
