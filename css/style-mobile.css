@@ -20,12 +20,12 @@ body {
     line-height: 20px;
 }
 
-h1 { margin: 0; padding: 0; font-size: 31px; line-height: 31px; }
-h2 { margin: 0; padding: 0; font-size: 23px; line-height: 23px; }
-h3 { margin: 0; padding: 0; font-size: 17px; line-height: 17px; }
-h4 { margin: 0; padding: 0; font-size: 14px; line-height: 14px; }
-p { margin: 0; padding: 0; font-size: 13px; line-height: 13px;}
-.occupation { margin: 0; padding: 0; font-size: 11px; line-height: 12.5px; }
+h1 { margin: 0; padding: 0; font-size: 36px; line-height: 36px; }
+h2 { margin: 0; padding: 0; font-size: 28px; line-height: 28px; }
+h3 { margin: 0; padding: 0; font-size: 23px; line-height: 23px; }
+h4 { margin: 0; padding: 0; font-size: 16px; line-height: 16px; }
+p { margin: 0; padding: 0; font-size: 14px; line-height: 14px;}
+.occupation { margin: 0; padding: 0; font-size: 12px; line-height: 12.5px; }
 
 .dark-bkg {
     color: var(--light-color);
@@ -70,7 +70,7 @@ p { margin: 0; padding: 0; font-size: 13px; line-height: 13px;}
     display: flex;
     justify-content: center;
     width:100%;
-    max-height: 127px;
+    max-height: 148px;
     background-color: var(--dark-color);
     z-index: 1;
 }
@@ -92,7 +92,7 @@ p { margin: 0; padding: 0; font-size: 13px; line-height: 13px;}
 
 .btn {
     display: inline-flex;
-    padding: 3px 10px;
+    padding: 5px 15px;
     color: var(--dark-color);
     background-color: var(--light-color);
     border: solid 3px var(--accent-color);
@@ -112,12 +112,14 @@ p { margin: 0; padding: 0; font-size: 13px; line-height: 13px;}
 
 .logo img {
     width: 200px;
-    height: px;
+    height: 39px;
 }
 
 .desktop-nav {
     display: none;
 }
+
+
 .mobile-nav {
     background-color: var(--dark-color);
     display: flex;
@@ -128,6 +130,18 @@ p { margin: 0; padding: 0; font-size: 13px; line-height: 13px;}
     margin-left: 13%;
     margin-right: 13%;
 }
+@media only screen and (max-width: 450px){
+    .mobile-nav {
+        background-color: var(--dark-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width:100%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
 
 .mobile-nav .menu {
     display: flex;
@@ -137,6 +151,8 @@ p { margin: 0; padding: 0; font-size: 13px; line-height: 13px;}
     margin-top: 12px;
     margin-bottom: 12px;
 }
+
+
 .mobile-nav .logo-and-button {
     display: flex;
     width: 100%;
@@ -324,12 +340,12 @@ p { margin: 0; padding: 0; font-size: 13px; line-height: 13px;}
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1131px;
+    height: 1188px;
     gap: 75px;
 }
 .subscription-plan {
     padding: 20px;
-    width: 327px;
+    max-width: 309px;
     border-radius: 20px;
     background-color: var(--dark-color);
     display: flex;
@@ -390,6 +406,7 @@ p { margin: 0; padding: 0; font-size: 13px; line-height: 13px;}
 }
 .content-container.gap42 {
     gap:31px;
+    margin-bottom: 166px;
 }
 .footer .info-content {
     display: flex;
@@ -418,8 +435,8 @@ p { margin: 0; padding: 0; font-size: 13px; line-height: 13px;}
     gap: 20px;
 }
 .contactlink img {
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 22px;
     border-radius: 0;
 }
 .footer .info-content .cell .text div {
@@ -433,7 +450,7 @@ hr {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .copyright #desktop {
     display: none;
@@ -470,9 +487,9 @@ mark.accent {
 body {
     font-family: 'Dubai-Regular';
 }
-h1 { font-family: 'Dubai-Bold'; margin: 0; padding: 0; font-size: 31px; line-height: 31px; }
-h2 { font-family: 'Dubai-Bold'; margin: 0; padding: 0; font-size: 23px; line-height: 23px; }
-h3 { font-family: 'Dubai-Bold'; margin: 0; padding: 0; font-size: 17px; line-height: 17px; }
-h4 { font-family: 'Dubai-Bold'; margin: 0; padding: 0; font-size: 14px; line-height: 14px; }
-p { font-family: 'Dubai-Regular'; margin: 0; padding: 0; font-size: 13px; line-height: 13px;}
-.occupation { font-family: 'Dubai-Regular'; margin: 0; padding: 0; font-size: 11px; line-height: 12.5px; }
+h1 { font-family: 'Dubai-Bold'; margin: 0; padding: 0; font-size: 36px; line-height: 36px; }
+h2 { font-family: 'Dubai-Bold'; margin: 0; padding: 0; font-size: 28px; line-height: 28px; }
+h3 { font-family: 'Dubai-Bold'; margin: 0; padding: 0; font-size: 23px; line-height: 23px; }
+h4 { font-family: 'Dubai-Bold'; margin: 0; padding: 0; font-size: 16px; line-height: 16px; }
+p { font-family: 'Dubai-Regular'; margin: 0; padding: 0; font-size: 14px; line-height: 14px;}
+.occupation { font-family: 'Dubai-Regular'; margin: 0; padding: 0; font-size: 12px; line-height: 12.5px; }
