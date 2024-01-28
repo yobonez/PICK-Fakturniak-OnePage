@@ -5,12 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fakturniak</title>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/carousel.js"></script>
+        <!-- <link rel="stylesheet" href="css/style.css"> -->
+        <link rel="stylesheet" href="css/style-mobile.css">
+        <script src="js/util.js"></script>
     </head>
     <body>
         <div class="main dark-bkg">
-            <div class="fluid-container">
+            <div class="desktop-fluid-container">
                 <div class="desktop-nav">
                     <div class="logo">
                         <a href="#"><img href="#" src="./icons/FakturniakLogo.svg" class="icon"></a>
@@ -22,10 +23,10 @@
                         <a href="#kontakt">Kontakt</a>
                     </div>
                     <div class="action-buttons">
-                        <a class="btn black" href="#">
+                        <a class="btn black" id="desktop" href="#">
                             Zaloguj się
                         </a>
-                        <a class="btn" href="#">
+                        <a class="btn" id="desktop" href="#">
                             Wypróbuj za darmo przez 7 dni
                         </a>
                     </div>
@@ -47,7 +48,7 @@
                             </a>
                         </div>
                     </div>
-                    <img src="img/typekprzykompie.jpg" alt="typeklaptop" width="400px" height="400px">
+                    <img src="img/typekprzykompie.jpg" alt="typeklaptop" width="400px" height="400px" id="desktop">
                 </div>
             </div>
         </div>
@@ -537,10 +538,29 @@
                 </div>
                 <hr>
                 <div class="copyright">
-                    <a href="#"><div class="logo">
+                    <a href="#"><div class="logo" id="desktop">
                         <img href="#" src="./icons/FakturniakLogo.svg" class="icon">
                     </div></a>
                     <p>© yo bonez 2024 - Wszelkie prawa zastrzeżone</p>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-fluid-container dark-bkg">
+            <div class="mobile-nav">
+                <div class="menu">
+                    <p>Dlaczego warto?</p>
+                    <p>Opinie</p>
+                    <p>Cennik</p>
+                    <p>Kontakt</p>
+                    <a class="btn" id="desktop" href="#">
+                        Zaloguj się
+                    </a>
+                </div>
+                <div class="logo-and-button">
+                    <div class="logo">
+                        <a href="#"><img src="./icons/FakturniakLogo.svg" class="icon"></a>
+                    </div>
+                    <a class="hamburger-button"><img src="./icons/Hamburger-Szczala.svg" class="icon"></a>
                 </div>
             </div>
         </div>
